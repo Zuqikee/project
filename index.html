@@ -3,10 +3,109 @@
 <head>
     <style data-emotion="mantine" data-s=""></style>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preload" as="image" href="/assets/Hutao.jpg">
+    <link rel="stylesheet" href="/_next/static/css/ff9399e606869db4.css" data-precedence="next"
+    ><link rel="stylesheet" href="/_next/static/css/70796fed0f690c8f.css" data-precedence="next">
+    <link rel="stylesheet" href="/_next/static/css/6054a835c0611161.css" data-precedence="next">
+    <script src="/js/web.js" async=""></script>
+    <meta name="theme-color" content="#ffffff">
+    <link href="/css/font.css" rel="stylesheet">
+    <title>@zuqikee</title>
+    <script>document.querySelectorAll('body link[rel="icon"], body link[rel="apple-touch-icon"]').forEach(el => document.head.appendChild(el))</script>
+    <script id="_cursor" src="/js/cursor.js"></script>
+    <script id="_code">
+                const workerScript = `        
+            import init, { GunsSolver } from '/js/lolpow.js';
+            self.onmessage = async function (event) {               
+                const { ps, d, c, _n, org_ts } = event.data;
+                await init();
+                const _get_s = new GunsSolver(ps, c, parseInt(d), false, _n);
+                const ts = Math.floor(Date.now() / 1000);
+                const _tsoff = ts - Number(org_ts);
+                const tsp = ts - _tsoff;
+                const _res = await _get_s.solve_pow();    
+                if (_res !== null) {
+                    self.postMessage({ _res, ps, tsp, _n, c });
+                }
+            };
+        `;
+
+        const blob = new Blob([workerScript], { type: "application/javascript" });
+        const worker = new Worker(URL.createObjectURL(blob), { type: "module" });
+
+        worker.postMessage({
+            ps: '0d0642bffea9efe899d531c1d4cec5669bcdb2bb4822b4dc25f12fa6867',
+            d: '5',
+            c: '21eefab73761a13076b4c25fd5428a0524d425e43f266ceecf674cd634bf9ad5',
+            _n: 'DEmRAC0kuls4UDFQ',
+            org_ts: '1754743360'
+        });
+
+        worker.onmessage = async function (event) {
+            const { _res, ps, tsp, _n, c } = event.data;
+            if (_res !== undefined) {
+                await getResult(_res);
+            }
+        };
+    </script>
 </head>
 <body>
-    
-</body>
+    <video src="/assets/background.mp4" playsinline="" loop="" class="tlbY3n_ca56e6cc6120e82558ef"></video>
+    <audio src="/assets/Falling In Love.mp3" loop=""></audio>
+    <div class="yRVb3w_4ac5c10f247eb261df8a hUNw2Z_90eaf9aaa3c00ed121cd" style="pointer-events: none; display: none;"></div>
+    <div aria-hidden="true">
+        <div class="hV3GLF_af15aed43b3a13eae1d0">
+            <div class="sRxV1N_4276841c8cf4657159c8">❅</div>
+            </div>
+            <div class="hV3GLF_af15aed43b3a13eae1d0">
+                <div class="sRxV1N_4276841c8cf4657159c8">❅</div>
+            </div>
+            <div class="hV3GLF_af15aed43b3a13eae1d0">
+                <div class="sRxV1N_4276841c8cf4657159c8">❅</div>
+            </div>
+            <div class="hV3GLF_af15aed43b3a13eae1d0">
+                <div class="sRxV1N_4276841c8cf4657159c8">❅</div>
+            </div>
+            <div class="hV3GLF_af15aed43b3a13eae1d0">
+                <div class="sRxV1N_4276841c8cf4657159c8">❅</div>
+            </div>
+            <div class="hV3GLF_af15aed43b3a13eae1d0">
+                <div class="sRxV1N_4276841c8cf4657159c8">❅</div>
+            </div>
+            <div class="hV3GLF_af15aed43b3a13eae1d0">
+                <div class="sRxV1N_4276841c8cf4657159c8">❅</div>
+            </div>
+            <div class="hV3GLF_af15aed43b3a13eae1d0">
+                <div class="sRxV1N_4276841c8cf4657159c8">❅</div>
+            </div>
+            <div class="hV3GLF_af15aed43b3a13eae1d0">
+                <div class="sRxV1N_4276841c8cf4657159c8">❅</div>
+            </div>
+            <div class="hV3GLF_af15aed43b3a13eae1d0">
+                <div class="sRxV1N_4276841c8cf4657159c8">❅</div>
+            </div>
+            <div class="hV3GLF_af15aed43b3a13eae1d0">
+                <div class="sRxV1N_4276841c8cf4657159c8">❅</div>
+            </div>
+                <div class="hV3GLF_af15aed43b3a13eae1d0">
+                    <div class="sRxV1N_4276841c8cf4657159c8">❅</div>
+                </div>
+            </div>
+            <script>(self.__next_s=self.__next_s||[]).push(["/js/cursor.js",{"id":"_cursor"}])</script>
+            <style>
+                * {
+                    cursor: url(/assets/cursor.webp) 16 16, auto !important;
+                }
+                </style>
+                <style>
+            ::-moz-selection {
+                background: #ffffff;
+                color: #ffffff;
+            }
+            ::selection {
+                background: #ffffff;
+                color: #ffffff;
+            }
+    </body>
 </html>
